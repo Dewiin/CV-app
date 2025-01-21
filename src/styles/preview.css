@@ -1,0 +1,13 @@
+.preview {
+    min-height: 100vh;
+    min-width: 50vw;
+}
+
+.header-preview {
+    text-align: center;
+}
+
+.basic-info {
+    display: flex;
+    justify-content: space-evenly;
+}
