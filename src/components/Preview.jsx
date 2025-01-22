@@ -1,8 +1,12 @@
-import { HeaderPreview } from "./Header/HeaderPreview";
 import "../styles/preview.css"
+import { HeaderPreview } from "./Header/HeaderPreview";
+import { EducationPreview } from "./Education/EducationPreview";
 
-export function Preview() {
+export function Preview({ formData }) {
     return (
-        <HeaderPreview></HeaderPreview>
+        <>
+            <HeaderPreview formData={formData.header} />
+            <EducationPreview formData={formData.education} />
+        </>
     );
 }

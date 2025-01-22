@@ -1,13 +1,40 @@
 .preview {
-    min-height: 100vh;
-    min-width: 50vw;
+    max-height: 100vh;
+    min-width: 35vw;
+    background-color: aqua;
+    padding: var(--preview-padding);
 }
 
+/* Header */
 .header-preview {
     text-align: center;
 }
 
+.header-preview h1 {
+    margin: 0;
+}
+
 .basic-info {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 3rem;
+}
+
+/* Education */
+.education-preview h2{
+    margin-bottom: 0;
+    border-bottom: 1px solid;
+}
+
+.education-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.education-info h4 {
+    margin: 0;
+}
+
+.university-time-location-info {
+    text-align: right;
 }

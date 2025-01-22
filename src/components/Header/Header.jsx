@@ -1,16 +1,38 @@
 import { Input } from "../Input.jsx";
 
-export function Header({onChange=null, name="", email="", phone="", address=""}) {
+export function Header( {formData, onChange} ) {
     return (
-        <div className="personal-information-form form-section">
-            <h1>Personal Details</h1>
-            <Input label="Full Name" type="text" placeholder="Enter First and Last Name" onChange={onChange}>{name}</Input>
+        <>
+            <div className="personal-information-form form-section">
+                <h1>Personal Details</h1>
+                <Input 
+                    label="Full Name" 
+                    placeholder="Enter First and Last Name" 
+                    value={formData.name} 
+                    onChange={(e) => onChange(e, "header", "name")} 
+                />
 
-            <Input label="Email" type="text" placeholder="Enter Email" onChange={onChange}>{email}</Input>
+                <Input 
+                    label="Email"  
+                    placeholder="Enter Email" 
+                    value={formData.email} 
+                    onChange={(e) => onChange(e, "header", "email")} 
+                />
 
-            <Input label="Phone Number" type="text" placeholder="Enter Phone Number" onChange={onChange}>{phone}</Input>
+                <Input 
+                    label="Phone Number" 
+                    placeholder="Enter Phone Number" 
+                    value={formData.phone} 
+                    onChange={(e) => onChange(e, "header", "phone")} 
+                />
 
-            <Input label="Address" type="text" placeholder="City, Country" onChange={onChange}>{address}</Input>
-        </div>
+                <Input 
+                    label="Address" 
+                    placeholder="City, Country" 
+                    value={formData.address} 
+                    onChange={(e) => onChange(e, "header", "address")} 
+                />
+            </div>
+        </>
     );
 }

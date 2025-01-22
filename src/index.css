@@ -3,6 +3,10 @@
 :root {
     font-family: "Oswald", serif;
     font-weight: 500;
+    --border-radius: 25px;
+    --input-radius: 8px;
+    --form-padding: 3rem 2rem;
+    --preview-padding: 2rem 5rem;
 }
 
 html, body {
@@ -14,4 +18,5 @@ html, body {
     display: flex;
     margin: 2rem auto;
     width: fit-content;
+    gap: 2rem;
 }

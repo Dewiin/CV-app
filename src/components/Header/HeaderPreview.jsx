@@ -1,19 +1,21 @@
-export function HeaderPreview() {
+// import { useState } from "react";
+
+export function HeaderPreview({formData}) {
     return (
         <div className="header-preview">
-            <h1>Name</h1>
+            <h1>{formData.name || "Jane Smith"}</h1>
             <div className="basic-info">
                 <div>
                     <img></img>
-                    <span>email</span>
+                    <span>{formData.email || "janesmith89@outlook.com"}</span>
                 </div>
                 <div>
                     <img></img>
-                    <span>phone number</span>
+                    <span>{formData.phone || "123-456-7890"} </span>
                 </div>
                 <div>
                     <img></img>
-                    <span>Address</span>
+                    <span>{formData.address || "Los Angeles, California"}</span>
                 </div>
             </div>
         </div>

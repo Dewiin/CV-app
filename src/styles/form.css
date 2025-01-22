@@ -11,7 +11,7 @@
     display: block;
     min-width: 20vw;
     padding: 0.5rem;
-    border-radius: 8px;
+    border-radius: var(--input-radius);
     border: none;
     resize: none;
 }
@@ -21,9 +21,9 @@
 }
 
 .form > div {
-    padding: 2rem;
+    padding: var(--form-padding);
     background-color: pink;
-    border-radius: 25px;
+    border-radius: var(--border-radius);
 }
 
 .form-section {
