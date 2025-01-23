@@ -3,19 +3,19 @@
 export function HeaderPreview({formData}) {
     return (
         <div className="header-preview">
-            <h1>{formData.name || "Jane Smith"}</h1>
+            <h1>{formData.name}</h1>
             <div className="basic-info">
                 <div>
                     <img></img>
-                    <span>{formData.email || "janesmith89@outlook.com"}</span>
+                    <span>{formData.email}</span>
                 </div>
                 <div>
                     <img></img>
-                    <span>{formData.phone || "123-456-7890"} </span>
+                    <span>{formData.phone} </span>
                 </div>
                 <div>
                     <img></img>
-                    <span>{formData.address || "Los Angeles, California"}</span>
+                    <span>{formData.address}</span>
                 </div>
             </div>
         </div>

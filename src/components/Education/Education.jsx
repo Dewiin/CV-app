@@ -65,7 +65,7 @@ export function Education({formData, arrayChange, addNewItem, removeItem, isEdit
                     ) : (
                         <>
                             <div className="collapsed-item" onClick={() => {toggleExpand("education", index), saveItem("education", true)}}>
-                                <p>{education.school} - {education.degree}</p>
+                                <p>{((education.school || education.degree) && `${education.school} - ${education.degree}`) || "Undefined"}</p>
                             </div>
                         </>
                     )}

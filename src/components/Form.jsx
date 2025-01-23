@@ -1,5 +1,4 @@
 import "../styles/form.css"
-// import { useState } from "react";
 import { Education } from "./Education/Education";
 import { Experience } from "./Experience/Experience";
 import { Header } from "./Header/Header";

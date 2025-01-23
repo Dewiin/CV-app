@@ -12,10 +12,13 @@
     --preview-background-color: rgba(255, 255, 255, 0.9);
 }
 
+html {
+    background-color: rgba(10, 10, 10, 0.9);
+}
+
 html, body {
     margin: 0;
     padding: 0;
-    background-color: rgba(10, 10, 10);
 }
 
 #root {

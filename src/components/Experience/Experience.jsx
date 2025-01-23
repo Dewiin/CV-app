@@ -73,7 +73,7 @@ export function Experience( {formData, arrayChange, addNewItem, removeItem, isEd
                         ) : (
                             <>
                                 <div className="collapsed-item" onClick={() => {toggleExpand("experience", index), saveItem("experience", true)}}>
-                                    <p>{experience.company} - {experience.position}</p>
+                                    <p>{((experience.company || experience.position) && `${experience.company} - ${experience.position}`) || "Undefined"}</p>
                                 </div>
                             </>
                         )
