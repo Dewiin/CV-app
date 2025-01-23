@@ -1,11 +1,13 @@
 .preview {
-    max-height: 100vh;
-    min-width: 35vw;
-    background-color: aqua;
+    height: 100vh;
+    width: 35vw;
+    background-color: var(--preview-background-color);
     padding: var(--preview-padding);
+    box-shadow: var(--shadow);
+    overflow: hidden;
 }
 
-/* Header */
+/* Header Form*/
 .header-preview {
     text-align: center;
 }
@@ -21,7 +23,7 @@
 }
 
 /* Education */
-.education-preview h2{
+.education-preview h2 {
     margin-bottom: 0;
     border-bottom: 1px solid;
 }
@@ -37,4 +39,29 @@
 
 .university-time-location-info {
     text-align: right;
+}
+
+/* Experience */
+.experience-preview h2 {
+    margin-bottom: 0;
+    border-bottom: 1px solid;
+}
+
+.experience-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.experience-info h4 {
+    margin: 0;
+}
+
+.company-time-location-info {
+    text-align: right;
+}
+
+.company-description > p {
+    margin-left: 2rem;
+    font-weight: 300;
+    white-space: pre-line;
 }

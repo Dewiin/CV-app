@@ -5,13 +5,17 @@
     font-weight: 500;
     --border-radius: 25px;
     --input-radius: 8px;
-    --form-padding: 3rem 2rem;
+    --form-padding: 2rem;
     --preview-padding: 2rem 5rem;
+    --shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    --form-background-color: rgba(225, 225, 225, 0.8);
+    --preview-background-color: rgba(255, 255, 255, 0.9);
 }
 
 html, body {
     margin: 0;
     padding: 0;
+    background-color: rgba(10, 10, 10);
 }
 
 #root {
@@ -19,4 +23,8 @@ html, body {
     margin: 2rem auto;
     width: fit-content;
     gap: 2rem;
+}
+
+span {
+    font-weight: 300;
 }

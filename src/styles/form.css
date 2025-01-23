@@ -1,7 +1,7 @@
 .form {
     min-height: 100vh;
     max-width: 25vw;
-    min-width: 200px;
+    min-width: 430px;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -9,11 +9,11 @@
 
 .form input, .form textarea {
     display: block;
-    min-width: 20vw;
+    min-width: 95%;
     padding: 0.5rem;
     border-radius: var(--input-radius);
     border: none;
-    resize: none;
+    resize: vertical;
 }
 
 .form h1{
@@ -22,12 +22,76 @@
 
 .form > div {
     padding: var(--form-padding);
-    background-color: pink;
+    background-color: var(--form-background-color);
     border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
 }
 
+.timeline {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Education */
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.education-section {
+    display: none;
+}
+
+/* Experience */
+.work-experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.work-experience-section {
+    display: none;
+}
+
+/* Form Dropdown Animation */
 .form-section {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    animation: expand 200ms ease;
+    transform-origin: top;
+}
+
+@keyframes expand {
+    0% {
+        transform: scaleY(0);
+    }
+    
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+/* Collapsed */
+.collapsed-item {
+    border-bottom: 1px solid;
+    cursor: pointer;
+}
+
+/* Edit Controls */
+.edit-controls {
+    display: flex;
+}
+
+button {
+    font-size: 16px;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+    margin: 1rem auto 0;
 }

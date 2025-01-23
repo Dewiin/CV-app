@@ -1,52 +1,86 @@
+import { useState } from "react";
 import { Input } from "../Input.jsx";
 
-export function Experience( {formData, onChange }) {
+export function Experience( {formData, arrayChange, addNewItem, removeItem, isEditing, saveItem, toggleExpand }) {
+    const [isActive, setIsActive] = useState(false);
+
+    const toggleActive = () => {
+        setIsActive(!isActive);
+    }
+
     return (
         <div className="work-experience-form form-section">
-            <h1>Work Experience</h1>
-            <Input 
-                label="Company Name" 
-                placeholder="Enter Company Name" 
-                value={formData.company}
-                onChange={e => onChange(e, "company")} 
-            />
+            <div className="work-experience-header" onClick={toggleActive}>
+                <h1>Work Experience</h1>
+                <span>{isActive ? "▲" : "▼"}</span>
+            </div>
+            {formData.map((experience, index) => (
+                <div key={index} className={`work-experience-section ${isActive ? "form-section" : ""}`}>
+                    {experience.expanded ? (
+                        <>
+                            <Input 
+                                label="Company Name" 
+                                placeholder="Enter Company Name" 
+                                value={experience.company}
+                                onChange={e => arrayChange(e, "experience", index, "company")} 
+                            />
 
-            <Input 
-                label="Position Title" 
-                placeholder="Enter Position Title"
-                value={formData.position} 
-                onChange={e => onChange(e, "position")}
-            />
+                            <Input 
+                                label="Position Title" 
+                                placeholder="Enter Position Title"
+                                value={experience.position} 
+                                onChange={e => arrayChange(e, "experience", index, "position")}
+                            />
 
-            <Input 
-                label="Start Date" 
-                placeholder="Enter Start Date"
-                value={formData.start} 
-                onChange={e => onChange(e, "start")}
-            />
+                            <div className="timeline">
+                                <Input 
+                                    label="Start Date" 
+                                    placeholder="Enter Start Date"
+                                    value={experience.start} 
+                                    onChange={e => arrayChange(e, "experience", index, "start")}
+                                />
 
-            <Input 
-                label="End Date" 
-                placeholder="Enter End Date"
-                value={formData.end} 
-                onChange={e => onChange(e, "end")}
-            />
+                                <Input 
+                                    label="End Date" 
+                                    placeholder="Enter End Date"
+                                    value={experience.end} 
+                                    onChange={e => arrayChange(e, "experience", index, "end")}
+                                />
+                            </div>
 
-            <Input 
-                label="Location" 
-                placeholder="Enter Location"
-                value={formData.location} 
-                onChange={e => onChange(e, "location")}
-            />
+                            <Input 
+                                label="Location" 
+                                placeholder="Enter Location"
+                                value={experience.location} 
+                                onChange={e => arrayChange(e, "experience", index, "location")}
+                            />
 
-            <Input 
-                label="Description" 
-                type="textarea" 
-                placeholder="Enter Description"
-                value={formData.description} 
-                onChange={e => onChange(e, "description")}
-            />
+                            <Input 
+                                label="Description" 
+                                type="textarea" 
+                                placeholder="Enter Description"
+                                value={experience.description} 
+                                onChange={e => arrayChange(e, "experience", index, "description")}
+                            />
 
+                            {isEditing[1] && (
+                                <div className="edit-controls">
+                                    <button onClick={() => removeItem("experience", index)}>Remove</button>
+                                    <button onClick={() => {toggleExpand("experience", index); saveItem("experience", false)}}>Save</button>
+                                </div>
+                            )}
+                        </>
+                        ) : (
+                            <>
+                                <div className="collapsed-item" onClick={() => {toggleExpand("experience", index), saveItem("experience", true)}}>
+                                    <p>{experience.company} - {experience.position}</p>
+                                </div>
+                            </>
+                        )
+                    }
+                </div>
+            ))}
+            {isActive && !isEditing[1] && <button onClick={() => addNewItem("experience")}>+ Experience</button>}
         </div>
     );
 }

@@ -12,7 +12,7 @@ export function Input({label, onChange=null, type="text", placeholder="", value=
             }
             {type==="textarea" && 
                 <textarea 
-                    rows="4" 
+                    rows="5" 
                     cols="50" 
                     placeholder={placeholder}
                     value={value}
