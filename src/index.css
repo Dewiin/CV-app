@@ -8,12 +8,14 @@
     --form-padding: 2rem;
     --preview-padding: 2rem 5rem;
     --shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    --form-background-color: rgba(225, 225, 225, 0.8);
+    --form-background-color: rgba(225, 225, 225, 0.5);
     --preview-background-color: rgba(255, 255, 255, 0.9);
+    --blur: blur(10px);
 }
 
 html {
-    background-color: rgba(10, 10, 10, 0.9);
+    background: url('./assets/fuji_background.jpg') no-repeat;
+    background-size: cover;
 }
 
 html, body {

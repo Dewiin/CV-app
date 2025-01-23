@@ -26,6 +26,8 @@
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     max-width: 18vw;
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
 }
 
 .timeline {
