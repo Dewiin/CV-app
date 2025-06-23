@@ -1,6 +1,7 @@
 .preview {
-    height: fit-content;
-    width: 35vw;
+    height: 1000px;
+    min-height: fit-content;
+    width: 750px;
     background-color: var(--preview-background-color);
     padding: var(--preview-padding);
     box-shadow: var(--shadow);

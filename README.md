@@ -1,3 +1,5 @@
+<a name="readme-top"></a>
+
 # CV-Builder 
 
 <div align="center">
@@ -17,6 +19,7 @@
   <li>
     <a href="#installation--setup">Installation & Setup</a>
   </li>
+  <li><a href="#demo">Demo</a></li>
   <li><a href="#contributing">Contributing</a></li>
   <li><a href="#license">License</a></li>
 </ol>
@@ -84,6 +87,11 @@ npm run dev
 - [ ] Add PDF export
 - [ ] Add responsive design
 <p align="right"><a href="#readme-top">Back to top</a></p>
+
+## Demo
+<div align="center" alt="demo video">
+  <img src="./public/cv_demo.gif">
+</div>
 
 ## Contributing 
 1. **Fork** the repository
